@@ -1,2 +1,3 @@
 # ynsay
 Dépot du projet Ynsay
+Test de compatibilité avec NetBeans, et ça marche surprise surprise....
