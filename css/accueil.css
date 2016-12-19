@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 
 Crée le 19 déc. 2016, 14:06:05
 Auteur : Romain Jacquiez
@@ -12,3 +13,16 @@ Nom du css : accueil
     width: 5%; 
     margin-right: 100px ; 
 }
+=======
+/* 
+Crée le 19 déc. 2016, 14:06:05
+Auteur : Romain Jacquiez
+Nom du css : accueil
+*/
+
+.logo{
+    
+    width: 20%;
+}
+
+>>>>>>> refs/remotes/origin/master
