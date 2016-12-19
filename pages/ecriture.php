@@ -30,6 +30,7 @@ But de la page : Ecriture d'un article sur le site
     <body>
         <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
         
+  
         <fieldset>
             <legend>Ecrire un article</legend>
                 <form method="post" action="verifArticle.php">
