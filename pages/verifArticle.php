@@ -21,13 +21,13 @@ But de la page : Verification de la validité d'un article
 	{
 		$titre = $_POST['titre'];
 		$corps = $_POST['corps'];
-		$tags = $_POST['tag'];
 		if(empty($tags))
 		{
 			$listeTags = "general";
 		}
 		else
 		{
+			$tags = $_POST['tag'];
 			$listeTags = "";
 			$nbTags = count($tags);
 			for($i=0; $i < $nbTags; $i++)
