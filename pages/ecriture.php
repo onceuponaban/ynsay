@@ -28,8 +28,9 @@ But de la page : Ecriture d'un article sur le site
     </head>
     
     <body>
-        <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
         
+       
+       
   
         <fieldset>
             <legend>Ecrire un article</legend>
