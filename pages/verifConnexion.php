@@ -13,8 +13,8 @@ if (( isset($_POST['pseudo']) AND empty($_POST['pseudo']) ) || ((strlen($_POST['
     echo "Veuillez spécifier un mot de passe";
 }
 
-if (isset($_POST['pseudo']) AND ! empty($_POST['pseudo'])AND
-        isset($_POST['mdp']) AND ! empty($_POST['mdp']) AND ( strlen($_POST['pseudo']) <= 20) AND ( strlen($_POST['mdp']) <= 50)) {
+if (isset($_POST['pseudo']) AND !empty($_POST['pseudo'])AND
+        isset($_POST['mdp']) AND !empty($_POST['mdp']) AND ( strlen($_POST['pseudo']) <= 20) AND ( strlen($_POST['mdp']) <= 50)) {
     try {
         $pseudo = $_POST['pseudo'];
         $mdp = md5($_POST['mdp']);
