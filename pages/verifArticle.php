@@ -1,7 +1,7 @@
 <!--
-Page crée le 19/12/2016 par Antoine Berenguer
+Page crï¿½e le 19/12/2016 par Antoine Berenguer
 Nom de la page : verifArticle
-But de la page : Verification de la validité d'un article
+But de la page : Verification de la validite d'un article
 -->
 
 <?php
@@ -9,12 +9,12 @@ But de la page : Verification de la validité d'un article
 	$formulaireValide = true;
 	if (( isset($_POST['titre']) AND empty($_POST['titre']) ) || ((strlen($_POST['titre'])) > 100)) {
 		$formulaireValide = false;
-		echo "Titre invalide! Vous devez renseigner un titre entre 1 et 100 caractères.<br />";
+		echo "Titre invalide! Vous devez renseigner un titre entre 1 et 100 caracteres.<br />";
 	}
 	
 	if (( isset($_POST['corps']) AND empty($_POST['corps']) ) || ((strlen($_POST['corps'])) > 10000)) {
 		$formulaireValide = false;
-		echo "Corps d'article invalide! Vous devez écrire un article entre 1 et 10000 caractères.<br />";
+		echo "Corps d'article invalide! Vous devez ecrire un article entre 1 et 10000 caracteres.<br />";
 	}
     
 	if ( $formulaireValide == true )
