@@ -1,3 +1,4 @@
+
 <!--
 Code de la page crée le 19/12/2016 par Romain Jacquiez
 Nom de la page : accueil
@@ -26,6 +27,7 @@ But de la page : page d'accueil, connexion / inscription
         <meta name="description" content="Présentation de Ynsay,
         formulaire de connexion/inscription" />
         <link href="../css/accueil.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
         <script type="text/javascript" src="oXHR.js"></script>
         <script type="text/javascript">
             function changeform(nombre) {
@@ -43,8 +45,8 @@ But de la page : page d'accueil, connexion / inscription
         </script>
     </head>
     
-    <body>
-        <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
+    <body class="#212121 grey darken-4">
+        <center><img class="logo" src="../images/Logo.png" alt="Logo du site"/></center>
         
 
         <fieldset id="formC" style="display: inherit;">
@@ -70,6 +72,7 @@ But de la page : page d'accueil, connexion / inscription
                 </form>
                 <button onclick="changeform(2)">Me connecter</button>
         </fieldset>
+        <script src="../js/materialize.js" type="text/javascript"></script>
     </body>
 </html>
 
