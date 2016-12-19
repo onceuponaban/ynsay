@@ -31,12 +31,12 @@ But de la page : page d'accueil, connexion / inscription
             function changeform(nombre) {
                 if(nombre === 1)
                 {
-                    document.getElementById("formI").style.display="inline";
+                    document.getElementById("formI").style.display="inherit";
                     document.getElementById("formC").style.display="none";
                 }
                 if(nombre === 2)
                 {
-                   document.getElementById("formC").style.display="inline";
+                   document.getElementById("formC").style.display="inherit";
                    document.getElementById("formI").style.display="none";
                 }
             }
@@ -46,7 +46,7 @@ But de la page : page d'accueil, connexion / inscription
     <body>
         <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
         
-        <fieldset id="formC" style="display: inline;">
+        <fieldset id="formC" style="display: inherit;">
             <legend>Connexion</legend>
                 <form method="post" action="verifConnexion.php">
                     <p>Pseudonyme : <input type="text" name="pseudo"></p>
