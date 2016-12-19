@@ -46,7 +46,10 @@ But de la page : page d'accueil, connexion / inscription
     <body>
         <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
         
+
         <fieldset id="formC" style="display: inherit;">
+
+        <fieldset>
             <legend>Connexion</legend>
                 <form method="post" action="verifConnexion.php">
                     <p>Pseudonyme : <input type="text" name="pseudo"></p>
@@ -66,7 +69,6 @@ But de la page : page d'accueil, connexion / inscription
                     <input type="submit" value="Valider">
                 </form>
                 <button onclick="changeform(2)">Me connecter</button>
-            </legend>
         </fieldset>
     </body>
 </html>
