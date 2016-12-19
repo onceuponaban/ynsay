@@ -50,8 +50,6 @@ But de la page : page d'accueil, connexion / inscription
         
 
         <fieldset id="formC" style="display: inherit;">
-
-        <fieldset>
             <legend>Connexion</legend>
                 <form method="post" action="verifConnexion.php">
                     <p>Pseudonyme : <input type="text" name="pseudo"></p>
