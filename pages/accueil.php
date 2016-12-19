@@ -26,10 +26,11 @@ But de la page : page d'accueil, connexion / inscription
         <meta name="description" content="Présentation de Ynsay,
         formulaire de connexion/inscription" />
         <link href="../css/accueil.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
     </head>
     
-    <body>
-        <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
+    <body class="#212121 grey darken-4">
+        <center><img class="logo" src="../images/Logo.png" alt="Logo du site"/></center>
         
         <fieldset>
             <legend>Connexion</legend>
@@ -39,6 +40,7 @@ But de la page : page d'accueil, connexion / inscription
                     <input type="submit" value="Valider">
                 </form>
         </fieldset>
+        <script src="../js/materialize.js" type="text/javascript"></script>
     </body>
 </html>
 
