@@ -29,7 +29,7 @@ But de la page : page d'accueil, connexion / inscription
     </head>
     
     <body>
-        <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
+       <!-- <img class="logo" src="../images/Logo.png" alt="Logo du site"/> -->
         
         <fieldset>
             <legend>Connexion</legend>
