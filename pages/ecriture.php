@@ -24,6 +24,7 @@ if (!isset($_SESSION['pseudo'])) {
         <link href="../css/ecriture.css" rel="stylesheet" type="text/css"/>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
     </head>
+
     <header>
         <!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
         <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
@@ -40,5 +41,6 @@ if (!isset($_SESSION['pseudo'])) {
                 <input class="btn waves-effect waves-light orange accent-4" type="submit" value="Valider">
             </form>
         </fieldset>
+		<?php include 'footer.php';?>
     </body>
 </html>
