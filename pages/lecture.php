@@ -1,14 +1,9 @@
-<!--
-Page crée le 19/12/2016 par Antoine Berenguer
-Nom de la page : Ecriture
-But de la page : Ecriture d'un article sur le site
--->
-
 <?php
 /* la page crée le 19/12/2016 par pierre parrat
   Nom de la page : accueil
   But de la page : ecriture des articles
  */
+
 session_start();
 if ((!isset($_SESSION['connecte'])) || (isset($_POST['deconnecte']))) {
     $_SESSION ['connecte'] = false;
@@ -30,20 +25,24 @@ if (!isset($_SESSION['pseudo'])) {
     </head>
 
     <header>
-        <!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
+        <!-- metre en place le logo a droite puis metre en place le nuage de tag et bouton envoyer dans le header  -->
         <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
+        <fieldset>
+            <legend>liste des tags </legend>
+            <fieldset>
+                <legend>tag promo:</legend>
+                <p> cir1 </p>
+                <p> cir2 </p>
+
+            </fieldset>
+
+
+
+        </fieldset>
 
     </header>
 
-    <body class="#212121 grey darken-4">
+    <body class="#212121 grey darken-4" >
 
-        <fieldset>
-            <legend>Ecrivez votre article</legend>
-            <form method="post" action="verifArticle.php">
-                <p>titre de votre article  <input type="text" name="titre"></p>
-                <p>Corps de votre article : <textarea name="corps">Votre article...</textarea></p>
-                <button type="submit" value="Valider"></button>
-            </form>
-        </fieldset>
     </body>
 </html>

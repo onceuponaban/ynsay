@@ -1,4 +1,3 @@
-
 <!--
 Code de la page crée le 19/12/2016 par Romain Jacquiez
 Nom de la page : accueil
@@ -28,7 +27,7 @@ But de la page : page d'accueil, connexion / inscription
         formulaire de connexion/inscription" />
         <link href="../css/accueil.css" rel="stylesheet" type="text/css"/>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
-        <script type="text/javascript" src="oXHR.js"></script>
+        <script src="../js/oXHR.js" type="text/javascript"></script>
         <script type="text/javascript">
             function changeform(nombre) {
                 if(nombre === 1)
@@ -42,6 +41,33 @@ But de la page : page d'accueil, connexion / inscription
                    document.getElementById("formI").style.display="none";
                 }
             }
+            
+            function request(callback){
+                    var xhr = getXMLHttpRequest();
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 0)) 
+                        {
+                            callback(xhr.responseText);
+                            document.getElementById("loader").style.display = "none";
+                        }
+                        else if (xhr.readyState < 4) 
+                        {
+                            document.getElementById("loader").style.display = "inherit";
+                        }
+                    }; 
+                    
+                    var pseudo = encodeURIComponent(document.getElementById("pseudo").value);
+                    var mdp = encodeURIComponent(document.getElementById("mdp").value);
+                    
+                    xhr.open("GET","verifConnexion.php?pseudo="+pseudo+"&mdp="+mdp+"",true);
+                    xhr.send(null);
+            }
+            
+            function readData(data)
+            {
+                document.getElementById("erreur").innerHTML = data;
+            }
         </script>
     </head>
     
@@ -51,11 +77,13 @@ But de la page : page d'accueil, connexion / inscription
 
         <fieldset id="formC" style="display: inherit;">
             <legend>Connexion</legend>
-                <form method="post" action="verifConnexion.php">
-                    <p>Pseudonyme : <input type="text" name="pseudo"></p>
-                    <p>Mot de passe : <input type="password" name="mdp"></p>
-                    <input type="submit" value="Valider">
+                <form>
+                    <div id="erreur"></div>
+                    <p>Pseudonyme : <input id="pseudo" type="text" name="pseudo"></p>
+                    <p>Mot de passe : <input id="mdp" type="password" name="mdp"></p>
+                    <span id="loader" style="display: none;"><img style="width: 6%;" src="../images/loader.gif" alt="Chargement" /></span></br>
                 </form>
+                <button onclick="request(readData);">Valider</button></br>
                 <button onclick="changeform(1)">Pas encore inscrit ?</button>
         </fieldset>
         
@@ -73,5 +101,3 @@ But de la page : page d'accueil, connexion / inscription
         <script src="../js/materialize.js" type="text/javascript"></script>
     </body>
 </html>
-
-
