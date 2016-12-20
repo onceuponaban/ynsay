@@ -8,27 +8,27 @@
  */
 
 
-if (( isset($_POST['pseudo']) AND empty($_POST['pseudo']) ) || ((strlen($_POST['pseudo'])) > 20)) {
+if (( isset($_GET['pseudo']) AND empty($_GET['pseudo']) ) || ((strlen($_GET['pseudo'])) > 20)) {
     echo "Veuillez saisir un pseudo";
-} else if (( isset($_POST['email']) AND empty($_POST['email']) ) || ((strlen($_POST['email'])) > 100)) {
+} else if (( isset($_GET['email']) AND empty($_GET['email']) ) || ((strlen($_GET['email'])) > 100)) {
     echo "Veuillez spécifier une adresse mail";
-} else if (( isset($_POST['mdp']) AND empty($_POST['mdp']) ) || ((strlen($_POST['mdp'])) > 50)) {
+} else if (( isset($_GET['mdp']) AND empty($_GET['mdp']) ) || ((strlen($_GET['mdp'])) > 50)) {
     echo "Veuillez spécifier un mot de passe";
-} else if (( isset($_POST['cmdp']) AND empty($_POST['cmdp']) ) || ((strlen($_POST['cmdp'])) > 50)) {
+} else if (( isset($_GET['cmdp']) AND empty($_GET['cmdp']) ) || ((strlen($_GET['cmdp'])) > 50)) {
     echo "Veuillez spécifier une confirmaion de mot de passe";
-} else if ((isset($_POST['mdp'])) AND isset($_POST['cmdp']) AND $_POST['mdp'] != $_POST['cmdp']) {
+} else if ((isset($_GET['mdp'])) AND isset($_GET['cmdp']) AND $_GET['mdp'] != $_GET['cmdp']) {
     echo "Votre mot de passe et sa confirmation sont différentes";
 }
 
-if (isset($_POST['pseudo']) AND !empty($_POST['pseudo'])AND
-        isset($_POST['mdp']) AND !empty($_POST['mdp']) AND
-        isset($_POST['cmdp']) AND !empty($_POST['cmdp']) AND
-        isset($_POST['email']) AND !empty($_POST['email']) AND ( strlen($_POST['pseudo']) <= 20) AND ( strlen($_POST['mdp']) <= 50)
-        AND ( strlen($_POST['cmdp']) <= 50) AND ( strlen($_POST['email']) <= 100)) {
+if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
+        isset($_GET['mdp']) AND !empty($_GET['mdp']) AND
+        isset($_GET['cmdp']) AND !empty($_GET['cmdp']) AND
+        isset($_GET['email']) AND !empty($_GET['email']) AND ( strlen($_GET['pseudo']) <= 20) AND ( strlen($_GET['mdp']) <= 50)
+        AND ( strlen($_GET['cmdp']) <= 50) AND ( strlen($_GET['email']) <= 100)) {
     try {
-        $pseudo = $_POST['pseudo'];
-        $email = $_POST['email'];
-        $mdp = md5($_POST['mdp']);
+        $pseudo = $_GET['pseudo'];
+        $email = $_GET['email'];
+        $mdp = md5($_GET['mdp']);
         $erreur = false;
 
         $dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', '');
