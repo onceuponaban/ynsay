@@ -40,24 +40,24 @@ if (!isset($_SESSION['pseudo'])) {
                     <td>association :</td>
                 </tr>
                 <tr>
-                <!--    <td> <intput type="button" value="N1 " onclick = ""></intput></td> -->
-                    <td><intput>CIR</intput></td>
-                </tr>
-                 <tr>
-                    <td><intput>N2</intput></td>
-                    <td><intput>CSI</intput></td>
-                </tr>
-                 <tr>
-                    <td><intput>N3</intput></td>
-                    <td><intput>CNB</intput></td>
+                    <td> <button onclick="">N1</button></td> 
+                    <td>  <button onclick="">CIR</button></td>
                 </tr>
                 <tr>
-                    <td><intput>M1</intput></td>
-                    <td><intput>IT2I</intput></td>
+                    <td> <button onclick="">N2</button></td> 
+                    <td>  <button onclick="">CSI</button></td>
                 </tr>
-                 <tr>
-                    <td><intput>M2</intput></td>
-                    <td><intput></intput></td>
+                <tr>
+                    <td> <button onclick="">N3</button></td> 
+                    <td>  <button onclick="">CNB</button></td>
+                </tr>
+                <tr>
+                    <td> <button onclick="">M1</button></td> 
+                    <td>  <button onclick="">IT2I</button></td>
+                </tr>
+                <tr>
+                    <td> <button onclick="">M2</button></td> 
+                    <td>  <button onclick=""></button></td>
                 </tr>
                 
             </table>
