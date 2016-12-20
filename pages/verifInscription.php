@@ -12,8 +12,8 @@ if (( isset($_GET['pseudo']) AND empty($_GET['pseudo']) ) || ((strlen($_GET['pse
     echo "Veuillez saisir un pseudo";
 } else if (( isset($_GET['email']) AND empty($_GET['email']) ) || ((strlen($_GET['email'])) > 100)) {
     echo "Veuillez spécifier une adresse mail";
-}else if ((preg_match("/^[-+.\w]{1,64}@[-.\w]{1,64}\.[-.\w]{2,6}$/i", $_POST['email'])) == 0) {
-    echo "L adresse". $_POST['email'] ."n'est pas valide";
+}else if ((preg_match("/^[-+.\w]{1,64}@[-.\w]{1,64}\.[-.\w]{2,6}$/i", $_GET['email'])) == 0) {
+    echo "L adresse ".$_GET['email']." n'est pas valide";
 } else if (( isset($_GET['mdp']) AND empty($_GET['mdp']) ) || ((strlen($_GET['mdp'])) > 50)) {
     echo "Veuillez spécifier un mot de passe";
 } else if (( isset($_GET['cmdp']) AND empty($_GET['cmdp']) ) || ((strlen($_GET['cmdp'])) > 50)) {
