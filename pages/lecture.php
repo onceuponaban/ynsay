@@ -24,25 +24,49 @@ if (!isset($_SESSION['pseudo'])) {
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
     </head>
 
-    <header>
+   
+
+    <body class="#212121 grey darken-4" >
+         <header>
         <!-- metre en place le logo a droite puis metre en place le nuage de tag et bouton envoyer dans le header  -->
         <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
         <fieldset>
             <legend>liste des tags </legend>
-            <fieldset>
-                <legend>tag promo:</legend>
-                <p> cir1 </p>
-                <p> cir2 </p>
+            <table>
+                <tr>
+                    <td>promo :</td>
+                    <td>cycle :</td>
+                    <td>cours :</td>
+                    <td>association :</td>
+                </tr>
+                <tr>
+                    <td> <button onclick="">N1</button></td> 
+                    <td>  <button onclick="">CIR</button></td>
+                </tr>
+                <tr>
+                    <td> <button onclick="">N2</button></td> 
+                    <td>  <button onclick="">CSI</button></td>
+                </tr>
+                <tr>
+                    <td> <button onclick="">N3</button></td> 
+                    <td>  <button onclick="">CNB</button></td>
+                </tr>
+                <tr>
+                    <td> <button onclick="">M1</button></td> 
+                    <td>  <button onclick="">IT2I</button></td>
+                </tr>
+                <tr>
+                    <td> <button onclick="">M2</button></td> 
+                    <td>  <button onclick=""></button></td>
+                </tr>
+                
+            </table>
 
-            </fieldset>
-
-
+                
 
         </fieldset>
 
     </header>
-
-    <body class="#212121 grey darken-4" >
 
     </body>
 </html>
