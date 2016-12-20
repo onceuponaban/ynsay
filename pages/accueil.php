@@ -132,7 +132,7 @@ But de la page : page d'accueil, connexion / inscription
         
         <fieldset id="formI" style="display: none;">
             <legend>Inscription</legend>
-                <form method="post" action="verifInscription.php">
+                <form>
                     <div id="erreur2"></div>
                     <p>Votre pseudo utilisateur : <input id="pseudoI" type="text" name="pseudo"></p>
                     <p>E-mail : <input id="emailI" type="text" name="email"></p>
