@@ -31,7 +31,7 @@ if (isset($_POST['pseudo']) AND !empty($_POST['pseudo'])AND
         $email = $_POST['email'];
         
         $dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', '');
-        $resultat = $dbh->query("SELECT id_utilisateur, pseudo, password, email FROM utilisateur ORDER BY id_utilisateur");
+        $resultat = $dbh->query("INSERT id_utilisateur, pseudo, password, email INTO utilisateur");
         $check = $resultat->fetch(PDO::FETCH_NUM);
         if ($check == true) {
             foreach ($resultat as $ligne) {
@@ -40,7 +40,7 @@ if (isset($_POST['pseudo']) AND !empty($_POST['pseudo'])AND
                         AND ($email === $ligne['email'])) {
                     $_SESSION['connecte'] = true;
                     $_SESSION['pseudo'] = $ligne['pseudo'];
-                    header('location: ../index.php');
+                    header('location: ../accueil.php');
                 }
             }
             if ($_SESSION['connecte'] === false) {
