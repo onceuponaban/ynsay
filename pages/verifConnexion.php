@@ -29,7 +29,7 @@ if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
                 if (($pseudo === $ligne['pseudo']) AND ( $mdp === $ligne['password'])) {
                     $_SESSION['connecte'] = true;
                     $_SESSION['pseudo'] = $ligne['pseudo'];
-                    header('location: ecriture.php');
+                    header('location: lecture.php');
                 }
             }
             if ($_SESSION['connecte'] === false) {
