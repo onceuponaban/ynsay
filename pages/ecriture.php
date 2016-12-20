@@ -36,7 +36,7 @@ if (!isset($_SESSION['pseudo'])) {
             <form method="post" action="verifArticle.php">
                 <p>titre de votre article  <input type="text" name="titre"></p>
                 <p>Corps de votre article : <textarea name="corps">Votre article...</textarea></p>
-                <button type="submit" value="Valider"></button>
+                <input class="btn waves-effect waves-light orange accent-4" type="submit" value="Valider">
             </form>
         </fieldset>
 		<?php include 'footer.php';?>
