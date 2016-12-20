@@ -7,7 +7,7 @@ But de la page : Ecriture d'un article sur le site
 <?php
 /* la page crée le 19/12/2016 par pierre parrat
   Nom de la page : accueil
-  But de la page : mise en place de l'header
+  But de la page : ecriture des articles
  */
 session_start();
 if ((!isset($_SESSION['connecte'])) || (isset($_POST['deconnecte']))) {
@@ -31,11 +31,16 @@ if (!isset($_SESSION['pseudo'])) {
     <header>
         <!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
         <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
-        <fieldset class="espaceDEtag">
-            <legend> les tag que nous proposons </legend>    
-        </fieldset>
+
+
+
+
     </header>
-    <body class="#212121 grey darken-4" >
+
+    <body class="#212121 grey darken-4">
+
+
+
         <fieldset>
             <legend>Ecrivez votre article</legend>
             <form method="post" action="verifArticle.php">
