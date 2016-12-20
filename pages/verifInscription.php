@@ -7,6 +7,7 @@
   But : Vérifier si les informations envoyées sont présentes dans la base de données
  */
 
+
 if (( isset($_POST['pseudo']) AND empty($_POST['pseudo']) ) || ((strlen($_POST['pseudo'])) > 20)) {
     echo "Veuillez saisir un pseudo";
 } else if (( isset($_POST['mdp']) AND empty($_POST['mdp']) ) || ((strlen($_POST['mdp'])) > 50)) {

@@ -5,8 +5,7 @@ But de la page : Ecriture d'un article sur le site
 -->
 
 <?php
-/*
-  ode de la page crée le 19/12/2016 par pierre parrat
+/* la page crée le 19/12/2016 par pierre parrat
   Nom de la page : accueil
   But de la page : ecriture des articles
  */
@@ -26,29 +25,29 @@ if (!isset($_SESSION['pseudo'])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Page d'écriture des articles" />
-        <link href="../css/accueil.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/ecriture.css" rel="stylesheet" type="text/css"/>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
     </head>
     <header>
         <!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
         <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
-        
+
+
+
+
     </header>
 
-    <body>
-        
-        
-  
+    <body class="#212121 grey darken-4">
+
+
+
         <fieldset>
             <legend>Ecrivez votre article</legend>
-                <form method="post" action="verifArticle.php">
-                    <p>Titre : <input type="text" name="titre"></p>
-                    <p>Corps de l'article : <textarea name="corps">Votre article...</textarea></p>
-					<p>Tags :</p>
-					<p>CIR <input type="checkbox" name="tag[]" value="cir"></p>
-					<p>CSI <input type="checkbox" name="tag[]" value="csi"></p>
-                    <input type="submit" value="Valider">
-                </form>
+            <form method="post" action="verifArticle.php">
+                <p>titre de votre article  <input type="text" name="titre"></p>
+                <p>Corps de votre article : <textarea name="corps">Votre article...</textarea></p>
+                <input type="submit" value="Valider">
+            </form>
         </fieldset>
     </body>
 </html>
