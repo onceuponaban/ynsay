@@ -55,10 +55,6 @@ But de la page : Ecriture d'un article sur le site
 -->
 
 <?php
-/* la page crée le 19/12/2016 par pierre parrat
-  Nom de la page : accueil
-  But de la page : ecriture des articles
- */
 session_start();
 if ((!isset($_SESSION['connecte'])) || (isset($_POST['deconnecte']))) {
     $_SESSION ['connecte'] = false;
