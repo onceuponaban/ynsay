@@ -99,6 +99,18 @@ But de la page : page d'accueil, connexion / inscription
                     document.getElementById("erreur2").innerHTML = data;
                 }
             }
+            
+            function reiniterreur(code)
+            {
+                if(code === 1)
+                {
+                    document.getElementById("erreur").innerHTML = null;
+                }
+                if (code === 2)
+                {
+                    document.getElementById("erreur2").innerHTML = null;
+                }
+            }
         </script>
     </head>
     
@@ -115,7 +127,7 @@ But de la page : page d'accueil, connexion / inscription
                     <span id="loader" style="display: none;"><img style="width: 6%;" src="../images/loader.gif" alt="Chargement" /></span></br>
                 </form>
                 <button onclick="request(readData);">Valider</button></br>
-                <button onclick="changeform(1)">Pas encore inscrit ?</button>
+                <button onclick="changeform(1);reiniterreur(1);">Pas encore inscrit ?</button>
         </fieldset>
         
         <fieldset id="formI" style="display: none;">
@@ -129,7 +141,7 @@ But de la page : page d'accueil, connexion / inscription
                     <span id="loader" style="display: none;"><img style="width: 6%;" src="../images/loader.gif" alt="Chargement" /></span></br>
                 </form>
                 <button onclick="request2(readData);">Valider</button></br>
-                <button onclick="changeform(2)">Me connecter</button>
+                <button onclick="changeform(2);reiniterreur(2);">Me connecter</button>
         </fieldset>
         <script src="../js/materialize.js" type="text/javascript"></script>
     </body>
