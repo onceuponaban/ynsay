@@ -28,28 +28,15 @@ if (!isset($_SESSION['pseudo'])) {
         <link href="../css/ecriture.css" rel="stylesheet" type="text/css"/>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
     </head>
-<<<<<<< HEAD
+
     <header>
         <!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
         <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
-
-
-
 
     </header>
 
     <body class="#212121 grey darken-4">
 
-
-
-=======
-    
-    <body>
-        
-       
-       
-  
->>>>>>> refs/remotes/origin/master
         <fieldset>
             <legend>Ecrivez votre article</legend>
             <form method="post" action="verifArticle.php">
