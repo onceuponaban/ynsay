@@ -22,20 +22,25 @@ if (!isset($_SESSION['pseudo'])) {
 
 <html>
     <head>
-        <title>Ecrire un article</title>
+        <title>ecrire votre article </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Page d'écriture des articles" />
         <link href="../css/accueil.css" rel="stylesheet" type="text/css"/>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
     </head>
+    <header>
+        <!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
+        <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
+        
+    </header>
 
     <body>
-        <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
+        
         
   
         <fieldset>
-            <legend>Ecrire un article</legend>
+            <legend>Ecrivez votre article</legend>
                 <form method="post" action="verifArticle.php">
                     <p>Titre : <input type="text" name="titre"></p>
                     <p>Corps de l'article : <textarea name="corps">Votre article...</textarea></p>
