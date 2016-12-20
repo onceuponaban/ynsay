@@ -1,3 +1,9 @@
+<!--
+Page crée le 19/12/2016 par Antoine Berenguer
+Nom de la page : Ecriture
+But de la page : Ecriture d'un article sur le site
+-->
+
 <?php
     session_start();
     if ( (!isset($_SESSION['connecte'])) || (isset($_POST['deconnecte'])))
@@ -22,16 +28,18 @@
     </head>
     
     <body>
-        <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
         
+       
+       
+  
         <fieldset>
             <legend>Ecrire un article</legend>
                 <form method="post" action="verifArticle.php">
                     <p>Titre : <input type="text" name="titre"></p>
                     <p>Corps de l'article : <textarea name="corps">Votre article...</textarea></p>
 					<p>Tags :</p>
-					<p>CIR <input type="checkbox" name="tag" value="cir"></p>
-					<p>CSI <input type="checkbox" name="tag" value="csi"></p>
+					<p>CIR <input type="checkbox" name="tag[]" value="cir"></p>
+					<p>CSI <input type="checkbox" name="tag[]" value="csi"></p>
                     <input type="submit" value="Valider">
                 </form>
         </fieldset>
