@@ -56,7 +56,7 @@ But de la page : page d'accueil, connexion / inscription
                 <form method="post" action="verifConnexion.php">
                     <p>Pseudonyme : <input type="text" name="pseudo"></p>
                     <p>Mot de passe : <input type="password" name="mdp"></p>
-                    <input type="submit" value="Valider">
+                    <input type="submit" name="Valider">
                 </form>
                 <button onclick="changeform(1)">Pas encore inscrit ?</button>
         </fieldset>
