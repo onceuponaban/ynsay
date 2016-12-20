@@ -27,7 +27,7 @@ But de la page : page d'accueil, connexion / inscription
         formulaire de connexion/inscription" />
         <link href="../css/accueil.css" rel="stylesheet" type="text/css"/>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
-        <script type="text/javascript" src="oXHR.js"></script>
+        <script src="../js/oXHR.js" type="text/javascript"></script>
         <script type="text/javascript">
             function changeform(nombre) {
                 if(nombre === 1)
@@ -48,7 +48,7 @@ But de la page : page d'accueil, connexion / inscription
                     xhr.onreadystatechange = function () {
                         if (xhr.readyState === 4 && (xhr.status === 200 || xhr.status === 0)) 
                         {
-                            callback(xhr.reponseText);
+                            callback(xhr.responseText);
                             document.getElementById("loader").style.display = "none";
                         }
                         else if (xhr.readyState < 4) 
@@ -60,7 +60,7 @@ But de la page : page d'accueil, connexion / inscription
                     var pseudo = encodeURIComponent(document.getElementById("pseudo").value);
                     var mdp = encodeURIComponent(document.getElementById("mdp").value);
                     
-                    xhr.open("GET","verifConnexion2.php?pseudo="+pseudo+"&mdp="+mdp+"",true);
+                    xhr.open("GET","verifConnexion.php?pseudo="+pseudo+"&mdp="+mdp+"",true);
                     xhr.send(null);
             }
             
@@ -78,7 +78,7 @@ But de la page : page d'accueil, connexion / inscription
         <fieldset id="formC" style="display: inherit;">
             <legend>Connexion</legend>
                 <form>
-                    <span id="erreur"></span>
+                    <div id="erreur"></div>
                     <p>Pseudonyme : <input id="pseudo" type="text" name="pseudo"></p>
                     <p>Mot de passe : <input id="mdp" type="password" name="mdp"></p>
                     <span id="loader" style="display: none;"><img style="width: 6%;" src="../images/loader.gif" alt="Chargement" /></span></br>
