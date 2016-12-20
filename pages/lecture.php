@@ -40,7 +40,7 @@ if (!isset($_SESSION['pseudo'])) {
                     <td>association :</td>
                 </tr>
                 <tr>
-                    <td><intput type="button" value="N1 " onclick = ""></intput></td>
+                <!--    <td> <intput type="button" value="N1 " onclick = ""></intput></td> -->
                     <td><intput>CIR</intput></td>
                 </tr>
                  <tr>
