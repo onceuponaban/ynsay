@@ -33,7 +33,7 @@ if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
         $mdp = md5($_GET['mdp']);
         $erreur = false;
 
-        $dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', 'LRRH4H');
+        $dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', '');
         $resultat = $dbh->query("SELECT id_utilisateur, pseudo, email FROM utilisateur ORDER BY id_utilisateur");
         $check = $resultat->fetch(PDO::FETCH_NUM);
         if ($check == true) {
