@@ -10,7 +10,11 @@ Nom du css : accueil
     width: 20%;
 }
 
-#bouton{
-    margin-bottom: 10px;
+#bouton1{
+    margin : 22px 10px auto auto;
+    float: left;
+}
+
+#bouton2{
     float: left;
 }
