@@ -6,16 +6,10 @@ But de la page : page d'accueil, connexion / inscription
 
 <?php
     session_start();
-    if ( (!isset($_SESSION['connecte'])) || (isset($_POST['deconnecte'])))
-    {
-        $_SESSION ['connecte'] = false; 
-        $_SESSION['pseudo'] = "";
-    }
-    if (!isset($_SESSION['pseudo']))
+    if (!isset($_SESSION['connecte']))
     {
         $_SESSION['pseudo'] = "";
     }
-    
 ?>
 
 <html>
@@ -123,8 +117,7 @@ But de la page : page d'accueil, connexion / inscription
     </head>
     
     <body class="#212121 grey darken-4">
-        <center><img class="logo" src="../images/Logo.png" alt="Logo du site"/></center>
-        
+        <center><img class="logo" src="../images/Logo.png" alt="Logo du site"/></center>        
 
         <fieldset id="formC" style="display: inherit;">
             <legend>Connexion</legend>
