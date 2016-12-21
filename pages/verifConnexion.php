@@ -34,6 +34,10 @@ if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
                     echo 'OK';
                 }
             }
+            if(!$_SESSION['connecte'])
+            {
+                echo 'Mot de passe ou Pseudo incorrects';
+            }
         }
     } catch (PDOExeption $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
