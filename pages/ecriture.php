@@ -31,7 +31,6 @@ if (!isset($_SESSION['pseudo'])) {
 			<!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
 			<img class="logo" src="../images/Logo.png" alt="Logo du site"/>
 		</header>
-        <?php include 'profilUtilisateur.php';?>
         <fieldset>
             <legend>Ecrivez votre article</legend>
             <form method="post" action="verifArticle.php">
