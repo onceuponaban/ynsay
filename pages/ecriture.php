@@ -1,39 +1,44 @@
+
+<!--
+Page crée le 19/12/2016 par Antoine Berenguer
+Nom de la page : Ecriture
+But de la page : Ecriture d'un article sur le site
+-->
+
 <?php
-    session_start();
-    if ( (!isset($_SESSION['connecte'])) || (isset($_POST['deconnecte'])))
-    {
-        $_SESSION ['connecte'] = false; 
-        $_SESSION['pseudo'] = "";
-    }
-    if (!isset($_SESSION['pseudo']))
-    {
-        $_SESSION['pseudo'] = "";
-    }
-    
+session_start();
+if ((!isset($_SESSION['connecte'])) || (isset($_POST['deconnecte']))) {
+    $_SESSION ['connecte'] = false;
+    $_SESSION['pseudo'] = "";
+}
+if (!isset($_SESSION['pseudo'])) {
+    $_SESSION['pseudo'] = "";
+}
 ?>
 
 <html>
     <head>
-        <title>Ecrire un article</title>
+        <title>ecrire votre article </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Page d'écriture des articles" />
-        <link href="../css/accueil.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/ecriture.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
     </head>
-    
-    <body>
-        <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
-        
+
+    <body class="#212121 grey darken-4">
+		<header>
+			<!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
+			<img class="logo" src="../images/Logo.png" alt="Logo du site"/>
+		</header>
         <fieldset>
-            <legend>Ecrire un article</legend>
-                <form method="post" action="verifArticle.php">
-                    <p>Titre : <input type="text" name="titre"></p>
-                    <p>Corps de l'article : <textarea name="corps">Votre article...</textarea></p>
-					<p>Tags :</p>
-					<p>CIR <input type="checkbox" name="tag" value="cir"></p>
-					<p>CSI <input type="checkbox" name="tag" value="csi"></p>
-                    <input type="submit" value="Valider">
-                </form>
+            <legend>Ecrivez votre article</legend>
+            <form method="post" action="verifArticle.php">
+                <p>titre de votre article  <input type="text" name="titre"></p>
+                <p>Corps de votre article : <textarea name="corps">Votre article...</textarea></p>
+                <input class="btn waves-effect waves-light orange accent-4" type="submit" value="Valider">
+            </form>
         </fieldset>
+		<?php include 'footer.php';?>
     </body>
 </html>

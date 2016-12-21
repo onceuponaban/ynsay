@@ -4247,7 +4247,7 @@ html {
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(255, 255, 255, 0.87);
 }
 
 @media only screen and (min-width: 0) {
@@ -4954,7 +4954,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  background-color: #ff6000;
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
