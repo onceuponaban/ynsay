@@ -23,6 +23,7 @@ But de la page : page d'accueil, connexion / inscription
         <link href="../css/accueil.css" rel="stylesheet" type="text/css"/>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
         <script src="../js/oXHR.js" type="text/javascript"></script>
+
         <script type="text/javascript">
             function changeform(nombre) {
                 if(nombre === 1)

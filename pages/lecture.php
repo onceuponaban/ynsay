@@ -5,7 +5,7 @@
   But de la page : ecriture des articles
  */
 
-session_start();
+session_start(); // verification si c'est toujours le bon utilisateur
 if (!isset($_SESSION['connecte']) ) {
     $_SESSION ['connecte'] = false;
     $_SESSION['pseudo'] = "";
@@ -30,9 +30,9 @@ if (!isset($_SESSION['pseudo'])) {
     <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
 </header>
 <?php
-    include 'profilUtilisateur.php';
-    include 'selectionTag.php';
-    include 'footer.php';
+    include 'profilUtilisateur.php'; // appel  du profil utilisateur
+    include 'selectionTag.php'; // appel de la fonction de selection des tag
+    include 'footer.php'; // appel du footer
 ?>
 </body>
 <script src="../js/materialize.js" type="text/javascript"></script>

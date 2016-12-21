@@ -6,8 +6,8 @@ But de la page : Ecriture d'un article sur le site
 -->
 
 <?php
-session_start();
-if ((!isset($_SESSION['connecte'])) || (isset($_POST['deconnecte']))) {
+session_start(); // verification si c'est toujours le bon utilisateur
+if (!isset($_SESSION['connecte']))  {
     $_SESSION ['connecte'] = false;
     $_SESSION['pseudo'] = "";
 }
