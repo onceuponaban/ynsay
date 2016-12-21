@@ -12,4 +12,5 @@ Nom du css : accueil
 
 #bouton{
     margin-bottom: 10px;
+    float: left;
 }
