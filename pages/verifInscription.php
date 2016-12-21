@@ -54,7 +54,7 @@ if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
                 $stmt->bindParam(2, $email);
                 $stmt->bindParam(3, $mdp);
                 $stmt->execute();
-                echo 'Inscription effectuée (redirection dans 2sec)';
+                echo 'OK';
                 
             } else {
                 echo "Pseudo ou e-mail déjà utilisés";

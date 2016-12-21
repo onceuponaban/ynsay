@@ -102,6 +102,10 @@ But de la page : page d'accueil, connexion / inscription
                 {
                     document.location.href="http://localhost/ynsay/pages/lecture.php"; 
                 }
+                if(data === 'OK' && nb === 2)
+                {
+                    changeform(2);
+                }
             }
             
             function reiniterreur(code)
@@ -144,7 +148,7 @@ But de la page : page d'accueil, connexion / inscription
                     <p>Confirmation de votre mot de passe : <input id="cmdpI" type="password" name="cmdp"></p>
                     <span id="loader" style="display: none;"><img style="width: 6%;" src="../images/loader.gif" alt="Chargement" /></span></br>
                 </form>
-                <button class="btn waves-effect waves-light orange accent-4" onclick="request2(readData);changeform(2);">Valider</button></br>         
+                <button class="btn waves-effect waves-light orange accent-4" onclick="request2(readData);">Valider</button></br>         
                 <button class="btn waves-effect waves-light orange accent-4" onclick="changeform(2);reiniterreur(2);">Me connecter</button>
         </fieldset>
         <script src="../js/materialize.js" type="text/javascript"></script>
