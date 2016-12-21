@@ -119,14 +119,24 @@ But de la page : page d'accueil, connexion / inscription
     </head>
     
     <body class="#212121 grey darken-4">
-        <center><img class="logo" src="../images/Logo.png" alt="Logo du site"/></center>        
+        <center><img class="logo" src="../images/Logo.png" alt="Logo du site"/></center>
+        
+        <div id="desc">
+            <h2>
+                Titre de je sais pas quoi
+            </h2>
+            <p>
+                Bonjour ceci est le texte de présentation de YNSAY ! C'est bien hein...
+                Je sais c'est moi qui l'ai écrit.
+            </p>
+        </div>
 
-        <fieldset id="formC" style="display: inherit;">
+        <fieldset id="formC" style="display: inherit;"> <!--faut qu'on en discute Romain !! -->
             <legend>Connexion</legend>
                 <form>
                     <div id="erreur"></div>
-                    <p>Pseudonyme : <input id="pseudo" type="text" name="pseudo"></p>
-                    <p>Mot de passe : <input id="mdp" type="password" name="mdp"></p>
+                    <p>Pseudonyme : <input id="pseudo" type="text" name="pseudo" class="validate"></p>
+                    <p>Mot de passe : <input id="mdp" type="password" name="mdp" class="validate"></p>
                     <span id="loader" style="display: none;"><img style="width: 6%;" src="../images/loader.gif" alt="Chargement" /></span></br>
                 </form>
                 <button id="bouton1" class="btn waves-effect waves-light orange accent-4" onclick="request(readData);">Valider</button></br>
@@ -142,10 +152,10 @@ But de la page : page d'accueil, connexion / inscription
             <legend>Inscription</legend>
                 <form>
                     <div id="erreur2"></div>
-                    <p>Votre pseudo utilisateur : <input id="pseudoI" type="text" name="pseudo"></p>
-                    <p>E-mail : <input id="emailI" type="text" name="email"></p>
-                    <p>Votre mot de passe : <input id="mdpI" type="password" name="mdp"></p>
-                    <p>Confirmation de votre mot de passe : <input id="cmdpI" type="password" name="cmdp"></p>
+                    <p>Votre pseudo utilisateur : <input id="pseudoI" type="text" name="pseudo" class="validate"></p>
+                    <p>E-mail : <input id="emailI" type="text" name="email" class="validate"></p>
+                    <p>Votre mot de passe : <input id="mdpI" type="password" name="mdp" class="validate"></p>
+                    <p>Confirmation de votre mot de passe : <input id="cmdpI" type="password" name="cmdp" class="validate"></p>
                     <span id="loader" style="display: none;"><img style="width: 6%;" src="../images/loader.gif" alt="Chargement" /></span></br>
                 </form>
                 <button id="bouton1" class="btn waves-effect waves-light orange accent-4 " onclick="request2(readData);">Valider</button></br>         
