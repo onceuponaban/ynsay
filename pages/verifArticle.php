@@ -16,6 +16,12 @@ But de la page : Verification de la validité d'un article
 		$formulaireValide = false;
 		echo "Corps d'article invalide! Vous devez écrire un article entre 1 et 10000 caractères.<br />";
 	}
+	
+	if ($_SESSION['connecte'] != true)
+	{
+		$formulaireValide = false;
+		echo "Tu n'es pas connecté espèce de trash!";
+	}
     
 	if ( $formulaireValide == true )
 	{
@@ -24,7 +30,7 @@ But de la page : Verification de la validité d'un article
 		VALUES (NULL, :titre, :contenu, :id_utilisateur)");
 		$titre = $_POST['titre']; //On récupère le titre
 		$corps = $_POST['corps']; //On récupère le corps de l'article
-		$idUtilisateur = 1; //Pour le test, on utilisera l'utilisateur numéro 1 de la base de données.
+		$idUtilisateur = $_SESSION['id']; //On récupère l'ID de l'utilisateur pour le mettre comme auteur dans la base de données.
 		$stmt->bindValue(':titre', $titre);
 		$stmt->bindValue(':contenu', $corps);
 		$stmt->bindValue(':id_utilisateur', $idUtilisateur);
