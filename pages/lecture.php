@@ -30,7 +30,7 @@ if (!isset($_SESSION['pseudo'])) {
 <body class="#212121 grey darken-4" >
 
 <header>
-    <!-- metre en place le logo a droite puis metre en place le nuage de tag et bouton envoyer dans le header  -->
+    <!-- metre en place le logo a droite puis metre en place le nuage de tag  -->
     <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
 
 
@@ -47,6 +47,7 @@ if (!isset($_SESSION['pseudo'])) {
             <td><button id="CSI" onclick="">CSI</button></td>
             <td><button id="CNB" onclick="">CNB</button></td>
             <td><button id="IT2I" onclick="">IT2I</button></td>
+
         </tr>
         <tr>
             <td><button id="General" onclick="">General</button></td>
@@ -64,8 +65,11 @@ if (!isset($_SESSION['pseudo'])) {
         </tr>
 
     </table>
+    <!--  bouton  pour ecrire un article  -->
     <button onclick="" >Ecrire un article </button>
 </header>
+
+
 <?php include 'profilUtilisateur.php';?>
 
 
