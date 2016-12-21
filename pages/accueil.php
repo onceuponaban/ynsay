@@ -8,6 +8,7 @@ But de la page : page d'accueil, connexion / inscription
     session_start();
     if (!isset($_SESSION['connecte']))
     {
+        $_SESSION['connecte'] = false;
         $_SESSION['pseudo'] = "";
     }
 ?>
