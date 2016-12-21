@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 /*
   Crée le 19 déc. 2016, 14:46
   Auteur : Romain Jacquiez
@@ -55,6 +57,7 @@ if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
                 $stmt->bindParam(3, $mdp);
                 $stmt->execute();
                 echo 'OK';
+                $_SESSION['inscrit']='true';
                 
             } else {
                 echo "Pseudo ou e-mail déjà utilisés";

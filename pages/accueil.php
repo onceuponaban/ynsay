@@ -100,6 +100,7 @@ But de la page : page d'accueil, connexion / inscription
                 if(data === 'OK' && nb === 2)
                 {
                     changeform(2);
+                    location.reload();
                 }
             }
             
@@ -129,7 +130,12 @@ But de la page : page d'accueil, connexion / inscription
                     <span id="loader" style="display: none;"><img style="width: 6%;" src="../images/loader.gif" alt="Chargement" /></span></br>
                 </form>
                 <button class="btn waves-effect waves-light orange accent-4" onclick="request(readData);">Valider</button></br>
-                <button class="btn waves-effect waves-light orange accent-4" onclick="changeform(1);reiniterreur(1);">Pas encore inscrit ?</button> 
+                <?php
+                    if(!isset($_SESSION['inscrit']))
+                    {
+                        include 'module1.php';
+                    }
+                ?>
         </fieldset>
         
         <fieldset id="formI" style="display: none;">
