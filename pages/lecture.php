@@ -1,5 +1,5 @@
 <?php
-/*
+/**
   la page crée le 19/12/2016 par pierre parrat
   Nom de la page : accueil
   But de la page : ecriture des articles
