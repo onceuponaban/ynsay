@@ -5,7 +5,7 @@ Nom de la page : Ecriture
 But de la page : Ecriture d'un article sur le site
 -->
 
-<?php include 'verifSession.php' ; ?>
+<?php  ?>
 
 <html>
     <head>
@@ -31,6 +31,6 @@ But de la page : Ecriture d'un article sur le site
                 <input class="btn waves-effect waves-light orange accent-4" type="submit" value="Valider">
             </form>
         </fieldset>
-		<?php include 'footer.php';?>
+		<?php include 'extention_de_code/footer.php';?>
     </body>
 </html>

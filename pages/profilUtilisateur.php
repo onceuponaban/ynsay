@@ -22,7 +22,7 @@
                     }
                 }
                 //Affiche la photo de profil
-                echo "<img class=\"avatar\" src=$urlPhoto alt=\"Avatar\"/>"; 
+                echo "<img class=\"avatar\" src=$urlPhoto alt=\"Avatar\"/>";
             }
         } catch (PDOExeption $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
@@ -31,13 +31,12 @@
         //Affiche un phrase de bienvenue
         echo '<p>Bienvenue '.$_SESSION['pseudo'].'</p>';
         //Affiche le bouton déconnexion, renvoie à la page deconnexion.php
-        echo "<button class=\"btn waves-effect waves-light orange accent-4\" onclick=\"self.location.href='deconnexion.php'\">Déconnexion</button>";
+        echo "<button class=\"btn waves-effect waves-light orange accent-4\" onclick=\"self.location.href='extention_de_code/deconnexion.php'\">Déconnexion</button>";
     }   
     else //Si l'utilisateur n'est pas connecté
     {
         echo '<p>Vous n\'êtes pas connecté</p>';
-        echo "<button class=\"btn waves-effect waves-light orange accent-4\" onclick=\"self.location.href='deconnexion.php'\">Revenir à l'accueil</button>";
-
+        echo "<button class=\"btn waves-effect waves-light orange accent-4\" onclick=\"self.location.href='extention_de_code/deconnexion.php'\">Revenir à l'accueil</button>";
     }
     ?>
 </fieldset>

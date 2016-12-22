@@ -4,7 +4,9 @@
   Nom de la page : accueil
   But de la page : ecriture des articles
  */
-include 'verifSession.php' ;
+
+include 'extention_de_code/verifSession.php';
+
 ?>
 
 <html>
