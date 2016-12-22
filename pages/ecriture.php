@@ -5,16 +5,7 @@ Nom de la page : Ecriture
 But de la page : Ecriture d'un article sur le site
 -->
 
-<?php
-session_start(); // verification si c'est toujours le bon utilisateur
-if (!isset($_SESSION['connecte']))  {
-    $_SESSION ['connecte'] = false;
-    $_SESSION['pseudo'] = "";
-}
-if (!isset($_SESSION['pseudo'])) {
-    $_SESSION['pseudo'] = "";
-}
-?>
+<?php include 'verifSession.php' ; ?>
 
 <html>
     <head>
