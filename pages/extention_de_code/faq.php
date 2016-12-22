@@ -10,12 +10,12 @@ But de la page : répondre aux questions fréquentes
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Questions fréquentes" />
-        <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
-		<link href="../css/faq.css" rel="stylesheet" type="text/css"/>
+        <link href="../../css/materialize.css" rel="stylesheet" type="text/css"/>
+		<link href="../../css/faq.css" rel="stylesheet" type="text/css"/>
     </head>
     
     <body class="#212121 grey darken-4">
-        <center><img class="logo" src="../images/Logo.png" alt="Logo du site"/></center>
+        <center><img class="logo" src="../../images/Logo.png" alt="Logo du site"/></center>
 		<h1>Questions  et problèmes fréquents</h1>
 		<h2>Je n'arrive pas à créer un compte sur Ynsay!</h2>
 		<p>N'oubliez pas que vous devez obligatoirement utiliser une adresse email appartenant au groupe yncréa, par exemple une finissant en @isen.yncrea.fr </p>
