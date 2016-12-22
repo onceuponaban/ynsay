@@ -1,20 +1,13 @@
-
-<!--
+<?php
+/**
 Page crée le 19/12/2016 par Antoine Berenguer
 Nom de la page : Ecriture
 But de la page : Ecriture d'un article sur le site
--->
+*/
 
-<?php
-session_start();
-if ((!isset($_SESSION['connecte'])) || (isset($_POST['deconnecte']))) {
-    $_SESSION ['connecte'] = false;
-    $_SESSION['pseudo'] = "";
-}
-if (!isset($_SESSION['pseudo'])) {
-    $_SESSION['pseudo'] = "";
-}
-?>
+
+include 'extention_de_code/verifSession.php' ?>
+
 
 <html>
     <head>
@@ -31,6 +24,7 @@ if (!isset($_SESSION['pseudo'])) {
 			<!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
 			<img class="logo" src="../images/Logo.png" alt="Logo du site"/>
 		</header>
+        <?php include 'profilUtilisateur.php';?>
         <fieldset>
             <legend>Ecrivez votre article</legend>
             <form method="post" action="verifArticle.php">
@@ -39,6 +33,6 @@ if (!isset($_SESSION['pseudo'])) {
                 <input class="btn waves-effect waves-light orange accent-4" type="submit" value="Valider">
             </form>
         </fieldset>
-		<?php include 'footer.php';?>
+		<?php include 'extention_de_code/footer.php';?>
     </body>
 </html>
