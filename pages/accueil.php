@@ -1,10 +1,10 @@
-<!--
+<?php
+/**
 Code de la page crée le 19/12/2016 par Romain Jacquiez
 Nom de la page : accueil
 But de la page : page d'accueil, connexion / inscription
--->
+*/
 
-<?php
     session_start();
     if (!isset($_SESSION['connecte']))
     {

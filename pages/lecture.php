@@ -6,7 +6,6 @@
  */
 
 include 'extention_de_code/verifSession.php';
-
 ?>
 
 <html>
