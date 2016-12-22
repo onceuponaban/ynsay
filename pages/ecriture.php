@@ -1,11 +1,11 @@
-
-<!--
+<?php
+/**
 Page crée le 19/12/2016 par Antoine Berenguer
 Nom de la page : Ecriture
 But de la page : Ecriture d'un article sur le site
--->
+*/
 
-<?php  ?>
+ 'extention_de_code/verifSession.php' ?>
 
 <html>
     <head>
