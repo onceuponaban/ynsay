@@ -25,7 +25,7 @@ include 'extention_de_code/verifSession.php';
 <?php
     include 'profilUtilisateur.php'; // appel  du profil utilisateur
     include 'selectionTag.php'; // appel de la fonction de selection des tag
-    include 'footer.php'; // appel du footer
+    include 'extention_de_code/footer.php'; // appel du footer
 ?>
 </body>
 <script src="../js/materialize.js" type="text/javascript"></script>
