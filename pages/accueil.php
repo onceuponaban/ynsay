@@ -5,7 +5,6 @@ Nom de la page : accueil
 But de la page : page d'accueil, connexion / inscription
 */
 
-
     session_start();
     if (!isset($_SESSION['connecte']))
     {

@@ -5,7 +5,9 @@ Nom de la page : Ecriture
 But de la page : Ecriture d'un article sur le site
 */
 
+
 include 'extention_de_code/verifSession.php' ?>
+
 
 <html>
     <head>
