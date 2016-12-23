@@ -94,7 +94,7 @@ But de la page : page d'accueil, connexion / inscription
                 {
                     document.getElementById("erreur2").innerHTML = data;
                 }
-                if()
+                if(data === 'OK' && nb === 1)
                 {
                     document.location.href="http://localhost/ynsay/pages/lecture.php";
                 }
