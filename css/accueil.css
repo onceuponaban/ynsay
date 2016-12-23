@@ -6,11 +6,19 @@ Nom du css : accueil
 */
 
 .logo{
-    
     width: 20%;
 }
 
-#bouton{
-    margin-bottom: 10px;
+#bouton1{
+    margin : 21.5px 10px auto auto;
     float: left;
+}
+
+#bouton2{
+    float: left;
+}
+
+#desc{
+    text-align: center;
+    margin: 10px auto 50px auto;
 }
