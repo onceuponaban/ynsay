@@ -23,8 +23,10 @@ include 'extention_de_code/verifSession.php' ?>
         <img class="logo" src="../images/logo.png" alt="Logo du site"/>
     </header>
 
-    <?include 'selectionTag.php' ; ?>
+    <?include './selectionTag.php' ; ?>
+
     <?php include 'profilUtilisateur.php'; ?>
+
     <?php include 'extention_de_code/footer.php'; ?>
 </body>
 <script src="../js/materialize.js" type="text/javascript"></script>
