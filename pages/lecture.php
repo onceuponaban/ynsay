@@ -31,7 +31,7 @@ if (!isset($_SESSION['pseudo'])) {
 
 <header>
     <!-- metre en place le logo a droite puis metre en place le nuage de tag et bouton envoyer dans le header  -->
-    <img class="logo" src="../images/Logo.png" alt="Logo du site"/>
+    <img class="logo" src="../images/logo.png" alt="Logo du site"/>
 
 
     <table>
