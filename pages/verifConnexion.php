@@ -14,10 +14,8 @@ if (( isset($_GET['pseudo']) AND empty($_GET['pseudo']) ) || ((strlen($_GET['pse
 } else if (( isset($_GET['mdp']) AND empty($_GET['mdp']) ) || ((strlen($_GET['mdp'])) > 50)) {
     echo "Veuillez spécifier un mot de passe";
 }
-
-
-if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
-        isset($_GET['mdp']) AND !empty($_GET['mdp']) AND ( strlen($_GET['pseudo']) <= 20) AND ( strlen($_GET['mdp']) <= 50)) {
+if (isset($_GET['pseudo']) AND ! empty($_GET['pseudo'])AND
+        isset($_GET['mdp']) AND ! empty($_GET['mdp']) AND ( strlen($_GET['pseudo']) <= 20) AND ( strlen($_GET['mdp']) <= 50)) {
 
     try {
         $pseudo = $_GET['pseudo'];
@@ -31,11 +29,11 @@ if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
                 if (($pseudo === $ligne['pseudo']) AND ( $mdp === $ligne['password'])) {
                     $_SESSION['connecte'] = true;
                     $_SESSION['pseudo'] = $ligne['pseudo'];
-					$_SESSION['id'] = $ligne['id_utilisateur'];
+                    $_SESSION['id'] = $ligne['id_utilisateur'];
+                    echo 'OK';
                 }
             }
-            if(!$_SESSION['connecte'])
-            {
+            if ($_SESSION['connecte'] != true) {
                 echo 'Aucun compte ne correspond à ces données';
             }
         }
@@ -45,3 +43,4 @@ if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
     }
 }
 ?>
+

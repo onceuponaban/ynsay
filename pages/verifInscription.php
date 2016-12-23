@@ -46,8 +46,7 @@ if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
                 } else if ($email === $ligne['email']) {
                     $erreur = true;
                     break;
-                }
-            }
+                }}
 
             if ($erreur != true) {
                 //On remplit une ligne dans la table utilisateur
@@ -56,7 +55,8 @@ if (isset($_GET['pseudo']) AND !empty($_GET['pseudo'])AND
                 $stmt->bindParam(2, $email);
                 $stmt->bindParam(3, $mdp);
                 $stmt->execute();
-                $_SESSION['inscrit']='true';
+                $_SESSION['inscrit']=true;
+                echo 'OK';
                 
             } else {
                 echo "Pseudo ou e-mail déjà utilisés";
