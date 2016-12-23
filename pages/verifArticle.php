@@ -25,7 +25,7 @@ But de la page : Verification de la validité d'un article
     
 	if ( $formulaireValide == true )
 	{
-		$dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', 'LRRH4H');
+		$dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', '');
 		$stmt = $dbh->prepare("INSERT INTO article (id_article, titre, contenu, id_utilisateur)
 		VALUES (NULL, :titre, :contenu, :id_utilisateur)");
 		$titre = $_POST['titre']; //On récupère le titre
