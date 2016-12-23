@@ -24,7 +24,7 @@ But de la page : page d'accueil, connexion / inscription
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
         <script src="../js/oXHR.js" type="text/javascript"></script>
 
-        <script type="text/javascript">
+        <script type="text/javascript">            
             function changeform(nombre) {
                 if(nombre === 1)
                 {
@@ -94,9 +94,9 @@ But de la page : page d'accueil, connexion / inscription
                 {
                     document.getElementById("erreur2").innerHTML = data;
                 }
-                if(data === 'OK' && nb === 1)
+                if()
                 {
-                    document.location.href="http://localhost/ynsay/pages/lecture.php"; 
+                    document.location.href="http://localhost/ynsay/pages/lecture.php";
                 }
                 if(data === 'OK' && nb === 2)
                 {
