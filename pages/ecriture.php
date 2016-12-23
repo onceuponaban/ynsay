@@ -8,7 +8,6 @@ But de la page : Ecriture d'un article sur le site
 
 include 'extention_de_code/verifSession.php' ?>
 
-
 <html>
     <head>
         <title>ecrire votre article </title>
@@ -19,7 +18,7 @@ include 'extention_de_code/verifSession.php' ?>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
     </head>
 
-    <body class="#212121 grey darken-4">
+
 		<header>
 			<!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
 			<img class="logo" src="../images/logo.png" alt="Logo du site"/>
