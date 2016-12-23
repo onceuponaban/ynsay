@@ -7,18 +7,36 @@ Nom du css : accueil
 
 .logo{
     width: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
 }
 
-#bouton1{
-    margin : 21.5px 10px auto auto;
-    float: left;
+.img_loader{
+    width: 8%;
 }
 
-#bouton2{
-    float: left;
+button:hover{
+    color: #212121;
 }
 
-#desc{
+#formC,#formI{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+fieldset{
+    border-radius: 10px;
+    background-color: #E7E6E6;
+    color: #212121;
+    font-family: 'Trebuchet MS';
+}
+
+.titre_form{
     text-align: center;
-    margin: 10px auto 50px auto;
+    font-size: 130%;
+}
+
+#erreur,#erreur2{
+    color: #FF3333;
+    font-weight: bolder;
 }
