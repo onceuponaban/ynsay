@@ -1,10 +1,10 @@
-<!--
+<?php
+/**
 Code de la page crée le 19/12/2016 par Romain Jacquiez
 Nom de la page : accueil
 But de la page : page d'accueil, connexion / inscription
--->
+*/
 
-<?php
     session_start();
     if (!isset($_SESSION['connecte']))
     {
@@ -23,6 +23,7 @@ But de la page : page d'accueil, connexion / inscription
         <link href="../css/accueil.css" rel="stylesheet" type="text/css"/>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
         <script src="../js/oXHR.js" type="text/javascript"></script>
+
         <script type="text/javascript">
             function changeform(nombre) {
                 if(nombre === 1)
@@ -130,6 +131,7 @@ But de la page : page d'accueil, connexion / inscription
                     <span id="loader" style="display: none;"><img class="img_loader" src="../images/loader.gif" alt="Chargement" /></span></br>
                 </form>
                 <button class="btn waves-effect waves-light orange accent-4" onclick="request(readData);">Valider</button>
+
                 <?php
                     if(!isset($_SESSION['inscrit']))
                     {
@@ -151,7 +153,6 @@ But de la page : page d'accueil, connexion / inscription
                 <button class="btn waves-effect waves-light orange accent-4" onclick="request2(readData);">Valider</button>         
                 <button class="btn waves-effect waves-light orange accent-4" onclick="changeform(2);reiniterreur(2);">Me connecter</button>
         </fieldset>
-        <?php include 'footer.php';?>
         <script src="../js/materialize.js" type="text/javascript"></script>
     </body>
 </html>
