@@ -22,7 +22,7 @@ include 'extention_de_code/verifSession.php' ?>
     <body class="#212121 grey darken-4">
 		<header>
 			<!-- metre en place le logo a droite puis metre en place le nuage de tag dans le header  -->
-			<img class="logo" src="../images/Logo.png" alt="Logo du site"/>
+			<img class="logo" src="../images/logo.png" alt="Logo du site"/>
 		</header>
         <?php include 'profilUtilisateur.php';?>
         <fieldset>
