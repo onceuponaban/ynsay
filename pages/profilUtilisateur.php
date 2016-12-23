@@ -6,7 +6,7 @@
         {
             $pseudo = $_SESSION['pseudo'];
 
-            $dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', 'LRRH4H');
+            $dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', '');
             $resultat = $dbh->query("SELECT photo_profil FROM utilisateur WHERE pseudo = 'theo'");
             $check = $resultat->fetch(PDO::FETCH_NUM);
             if ($check == true) 
