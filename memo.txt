@@ -1,0 +1,6 @@
+yolo
+
+Question pour le 22/12/2016
+profil utilisateur  le " = theo " ligne 10  c'est un test a enlevé ?
+
+ecrtiture.php : il faut des checkboxes pour pouvoir sélectionner des tags (ou tout autre méthode qui résulte en un tableau nommé tag contenant les ID des tags choisis par l'utilisateur transmis par POST)
