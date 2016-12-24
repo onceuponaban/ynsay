@@ -30,7 +30,7 @@ if (isset($_GET['pseudo']) AND ! empty($_GET['pseudo'])AND
                     $_SESSION['connecte'] = true;                   //* création de variable de session pour naviguer entre les pages
                     $_SESSION['pseudo'] = $ligne['pseudo'];         //*
                     $_SESSION['id'] = $ligne['id_utilisateur'];     //*
-                    echo 'OK';
+                    echo '42';
                 }
             }
             if ($_SESSION['connecte'] != true) {                // si on ne trouve pas un utilisateur on affiche le message suivant

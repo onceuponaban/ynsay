@@ -16,14 +16,14 @@ include 'extention_de_code/verifSession.php' ?>
         <link href="../css/lecture.css" rel="stylesheet" type="text/css"/>
         <link href="../css/materialize.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body class="#212121 grey darken-4">
+   <body class="#212121 grey darken-4">
 
     <header>
         <!-- metre en place le logo a droite puis metre en place le nuage de tag et bouton envoyer dans le header  -->
         <img class="logo" src="../images/logo.png" alt="Logo du site"/>
     </header>
 
-    <?include './selectionTag.php' ; ?>
+    <?php include './selectionTag.php' ; ?>
 
     <?php include 'profilUtilisateur.php'; ?>
 
