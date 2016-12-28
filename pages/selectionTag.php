@@ -1,4 +1,4 @@
-<form action="./selectionTag.php"  method="get" name="verificationTag" >
+<form action="./lecture.php"  method="get" name="verificationTag" >
 <fieldset>
     <?php
 
@@ -47,19 +47,17 @@
   </form>
 
 <?php
-
-echo "coucou" ;
-
+/*
+// affiche si l'on a bien la recupération des id des tags
 if(isset($_GET["nomTag"]))
 {
     foreach ($_GET['nomTag'] as $valeur)
     {
         echo "La checkbox $valeur a été cochée<br>";
     }
+
 }
-else
-{
-    echo "erreur" ;
-}
+*/
+
 
 
