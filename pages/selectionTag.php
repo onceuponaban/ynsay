@@ -1,4 +1,4 @@
-<form action="./selectionTag.php"  method="get" name="verificationTag" >
+<form action="./lecture.php"  method="get" name="verificationTag" >
 <fieldset>
     <?php
 
@@ -48,8 +48,8 @@
 
 <?php
 
-echo "coucou" ;
-
+/*
+// on affiche quel sont les id selectionnée
 if(isset($_GET["nomTag"]))
 {
     foreach ($_GET['nomTag'] as $valeur)
@@ -57,9 +57,5 @@ if(isset($_GET["nomTag"]))
         echo "La checkbox $valeur a été cochée<br>";
     }
 }
-else
-{
-    echo "erreur" ;
-}
 
-
+*/
