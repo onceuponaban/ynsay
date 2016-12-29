@@ -7,6 +7,12 @@ But de la page : Verification de la validité d'un article
 <?php
 	session_start();
 	$formulaireValide = true;
+	
+	if ($_SESSION['connecte'] != true)
+	{
+		$formulaireValide = false;
+		echo "Tu n'es pas connecté espèce de trash!";
+	}
 	if (( isset($_POST['titre']) AND empty($_POST['titre']) ) || ((strlen($_POST['titre'])) > 100)) {
 		$formulaireValide = false;
 		echo "Titre invalide! Vous devez renseigner un titre entre 1 et 100 caractères.<br />";
@@ -16,16 +22,10 @@ But de la page : Verification de la validité d'un article
 		$formulaireValide = false;
 		echo "Corps d'article invalide! Vous devez écrire un article entre 1 et 10000 caractères.<br />";
 	}
-	
-	if ($_SESSION['connecte'] != true)
-	{
-		$formulaireValide = false;
-		echo "Tu n'es pas connecté espèce de trash!";
-	}
     
 	if ( $formulaireValide == true )
 	{
-		$dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', 'LRRH4H');
+		$dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', '');
 		$stmt = $dbh->prepare("INSERT INTO article (id_article, titre, contenu, id_utilisateur)
 		VALUES (NULL, :titre, :contenu, :id_utilisateur)");
 		$titre = $_POST['titre']; //On récupère le titre
@@ -36,32 +36,29 @@ But de la page : Verification de la validité d'un article
 		$stmt->bindValue(':id_utilisateur', $idUtilisateur);
 		$stmt->execute(); //On insère l'article dans la base
 		$idArticle = $dbh->lastInsertId(); //On récupère l'id de l'article, qui est actuellement le dernier rentré
-		if(empty($tags)) //Si aucun tag sélectionné
+		if(empty($tags)) //Si aucun tag sélectionné (note : dans la version finale du site, ceci sera une condition d'erreur car il devrait forcémment y avoir au moins un tag coché. On gère ce cas pour le moment pour les tests)
 		{
-			$listeTags = "general"; //On applique le tag général
-			$stmt = $dbh->prepare("INSERT INTO a_pour_tag (id_article, id_tag)
+			$stmt = $dbh->prepare("INSERT INTO a_pour_tag (id_article, id_tag) 
 			VALUES (:id_article, 2)"); //le tag general a pour id 2.
 			$stmt->bindValue(':id_article', $idArticle);
-			$stmt->execute();
+			$stmt->execute(); //On applique le tag général
 		}
 		else //Sinon
 		{
-			/*Pas d'action sur la base de données car la page écriture ne permet pas encore de sélectionner des tags.
-			TODO : gérer le cas où un tag ou plus sont sélectionnés*/
-			$tags = $_POST['tag']; //Le tableau de tags est copié dans une variable
-			$nbTags = count($tags); //On récupère le nombre de tags choisis
-			for($i=0; $i < $nbTags; $i++) //On génère la liste de tags
+			$id_tags = $_POST['tag']; //Le tableau de tags est copié dans une variable
+			$nbTags = count($id_tags); //On récupère le nombre de tags choisis
+			for($i=0; $i < $nbTags; $i++) //On applique tous les tags
 			{
-			  $listeTags = $listeTags.$tags[$i];
-			  if ($i != $nbTags - 1)
-			  {
-				  $listeTags = $listeTags.", ";
-			  }
+			  $stmt = $dbh->prepare("INSERT INTO a_pour_tag (id_article, id_tag)
+			  VALUES (:id_article, :id_tag)");
+			  $stmt->bindValue(':id_article', $idArticle);
+			  $stmt->bindValue(':id_tag', $id_tags[$i]);
+			  $stmt->execute(); 
 			}
 		}
-		// Maintenant, on affiche l'article
+		$dbh = null;
+		// Maintenant, on affiche l'article pour montrer que l'opération a réussi
 		echo "<h1>".$titre."</h1>";
 		echo "<p>".$corps."</p>";
-		echo "<p> tag(s) : ".$listeTags."</p>";
 	}
 ?>
