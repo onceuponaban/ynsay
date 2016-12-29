@@ -1,4 +1,4 @@
-<form action="./lecture.php"  method="get" name="verificationTag" >
+<form action="./lecture.php"  method="post" name="verificationTag" >
 <fieldset>
     <?php
 
@@ -48,9 +48,9 @@
 
 <?php
 
-/*
-// on affiche quel sont les id selectionnée
-if(isset($_GET["nomTag"]))
+
+
+if(isset($_POST["nomTag"]))
 {
     foreach ($_GET['nomTag'] as $valeur)
     {
@@ -58,4 +58,4 @@ if(isset($_GET["nomTag"]))
     }
 }
 
-*/
+
