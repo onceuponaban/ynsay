@@ -26,12 +26,16 @@ include 'extention_de_code/verifSession.php' ?>
         <?php include 'profilUtilisateur.php';?>
         <fieldset>
             <legend>Ecrivez votre article</legend>
-            <form method="post" action="verifArticle.php">
+            <form method="post" action="lecture.php.php">
+                <?php include 'selectionTagEcriture.php'; ?>
                 <p>titre de votre article  <input type="text" name="titre"></p>
                 <p>Corps de votre article : <textarea name="corps">Votre article...</textarea></p>
                 <input class="btn waves-effect waves-light orange accent-4" type="submit" value="Valider">
             </form>
         </fieldset>
+
+        <?php include 'verifArticle.php' ; ?>
+
 		<?php include 'extention_de_code/footer.php';?>
     </body>
 </html>
