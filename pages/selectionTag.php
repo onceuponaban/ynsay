@@ -49,7 +49,7 @@
 <?php
 
 
-// on affiche quel sont les id selectionnée
+// on affiche quel sont les id selectionnés
 if(isset($_POST["nomTag"]))
 {
     foreach ($_POST['nomTag'] as $valeur)
