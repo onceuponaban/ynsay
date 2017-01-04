@@ -36,16 +36,19 @@ But de la page : Verification de la validité d'un article
 		$stmt->bindValue(':id_utilisateur', $idUtilisateur);
 		$stmt->execute(); //On insère l'article dans la base
 		$idArticle = $dbh->lastInsertId(); //On récupère l'id de l'article, qui est actuellement le dernier rentré
-		if(empty($tags)) //Si aucun tag sélectionné (note : dans la version finale du site, ceci sera une condition d'erreur car il devrait forcémment y avoir au moins un tag coché. On gère ce cas pour le moment pour les tests)
+		if(!isset($_POST['idTag'])) //Si aucun tag sélectionné (note : dans la version finale du site, ceci sera une condition d'erreur car il devrait forcémment y avoir au moins un tag coché. On gère ce cas pour le moment pour les tests)
 		{
+                    echo "patate";
 			$stmt = $dbh->prepare("INSERT INTO a_pour_tag (id_article, id_tag) 
-			VALUES (:id_article, 2)"); //le tag general a pour id 2.
+			VALUES (:id_article, 999)"); //le tag general a pour id 2.
 			$stmt->bindValue(':id_article', $idArticle);
 			$stmt->execute(); //On applique le tag général
 		}
 		else //Sinon
 		{
-			$id_tags = $_POST['tag']; //Le tableau de tags est copié dans une variable
+                    echo "OUIIIIIIIIIII";
+			$id_tags = $_POST['idTag']; //Le tableau de tags est copié dans une variable
+                        var_dump($id_tags) ;
 			$nbTags = count($id_tags); //On récupère le nombre de tags choisis
 			for($i=0; $i < $nbTags; $i++) //On applique tous les tags
 			{
