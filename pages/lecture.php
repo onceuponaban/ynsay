@@ -28,6 +28,9 @@ include 'extention_de_code/verifSession.php' ?>
     <?php include 'profilUtilisateur.php'; ?>
 
     <?php include 'extention_de_code/footer.php'; ?>
+
+    <a href="ecriture.php">sdqsdqsds</a>
+
 </body>
 <script src="../js/materialize.js" type="text/javascript"></script>
 </html>

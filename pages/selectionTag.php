@@ -2,9 +2,6 @@
 <fieldset>
     <?php
 
-    /**
-     * ON peut recuperer la valeur des checkbox par des get et non par du post , c 'est enervant
-     */
 
     try
     {
@@ -48,8 +45,10 @@
 
 <?php
 
+/*
 
 // on affiche quel sont les id selectionnés
+>>>>>>> refs/remotes/origin/master
 if(isset($_POST["nomTag"]))
 {
     foreach ($_POST['nomTag'] as $valeur)
@@ -57,4 +56,4 @@ if(isset($_POST["nomTag"]))
         echo "La checkbox $valeur a été cochée<br>";
     }
 }
-
+*/
