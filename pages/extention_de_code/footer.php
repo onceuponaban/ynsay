@@ -1,4 +1,11 @@
-﻿<footer>
+﻿<?php
+/**
+ *  Date: 21/12/2016
+ * User: Antoine Berenguer
+*/
+?>
+
+<footer>
 	<ul>
 		<li><a href="javascript:void(0);">Mention légales</a></li>
 		<li><a href="javascript:void(0);">A propos</a></li>
