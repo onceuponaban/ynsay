@@ -96,7 +96,7 @@ But de la page : page d'accueil, connexion / inscription
                 }
                 if(data == 42 && nb === 1)        // il y a une couille ici !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 {
-                    document.location.href="http://localhost:63342/ynsay/pages/lecture.php";
+                    document.location.href="http://localhost/ynsay/pages/lecture.php";
                 }
                 if(data === 'OK' && nb === 2)
                 {
