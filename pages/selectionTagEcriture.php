@@ -8,7 +8,7 @@
 ?>
 
 
-        <fieldset>
+
             <?php
 
 
@@ -36,21 +36,25 @@
                             echo "<tr>";     // debut de la nouvelle ligne
                         }
                         // dans les checkbox on a un tableau qui se nomme nomTag[] qui va stocker les value des checkbox qui seront cochées ,
-                        echo"<td><input type=\"checkbox\" id=$id name='nomTag[]' value=$nom><label for=$id>$nom</label></td>";       // insertion des valeurs dans des bouttons de type checkbox
+                        echo"<td><input type=\"checkbox\" id=$id name='idTag[]' value=$id><label for=$id>$nom</label></td>";       // insertion des valeurs dans des bouttons de type checkbox
 
                         $descriptionAv = $description;
                     }
                     echo '</table>';        // fin du tableau
+                    
+
                 }
             } catch (PDOExeption $e) {                              // recuperation des erreurs
                 print "Erreur !: " . $e->getMessage() . "<br/>";
                 die();
             }
             ?>
-        </fieldset>
+
+
 
 
 <?php
+/*
 //filières
 $cirTF = 0 ;            //*  variable qui permetrons de voir si la valeur a été selectionné ou pas pour l'inserer dans la BDD
 $cnbTF = 0 ;            //*
@@ -73,11 +77,11 @@ $bciiTF      = 0 ;      //*
 $studiosTF   = 0 ;      //*
 $repairTF    = 0 ;      //*
 
-if(isset($_POST["nomTag"]))
+if(isset($_POST['idTag']))
 {
-    foreach ($_POST['nomTag'] as $valeur)
+    foreach ($_POST['idTag'] as $valeur)
     {
-        //echo "La checkbox $valeur a été cochée<br>";
+        echo "La checkbox $valeur a été cochée<br>";
 
         //filières
         if($valeur === "Cir")       // test pour savoir si la valeur est cochée si oui alors on passe les variable précedente à 1
@@ -153,3 +157,4 @@ if(isset($_POST["nomTag"]))
     }
 }
 
+*/
