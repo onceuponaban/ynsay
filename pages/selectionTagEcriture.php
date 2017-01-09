@@ -15,7 +15,7 @@
             try
             {
                 $dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', ''); // connection a la bdd
-                $resultat = $dbh->query("SELECT id_tag, nom_tag, description_tag FROM tag"); // requete sql sur la bdd
+                $resultat = $dbh->query("SELECT id_tag, nom_tag, description_tag FROM tag ORDER BY description_tag"); // requete sql sur la bdd
                 $check = $resultat->fetch(PDO::FETCH_NUM);
                 if ($check == true)
                 {
