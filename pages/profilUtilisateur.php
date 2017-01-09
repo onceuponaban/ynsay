@@ -9,7 +9,7 @@
             $stmt = $dbh->prepare("SELECT photo_profil FROM utilisateur WHERE pseudo = :pseudo");
             $stmt->bindValue(':pseudo', $pseudo);
             $stmt->execute();
-            
+            $check = $stmt->fetch(PDO::FETCH_NUM);
             if ($check == true) 
             {
                 $urlPhoto = "../images/photo_profil.png"; //icône par défaut
