@@ -31,6 +31,7 @@ if (isset($_GET['pseudo']) AND ! empty($_GET['pseudo'])AND
                     $_SESSION['pseudo'] = $ligne['pseudo'];         //*
                     $_SESSION['id'] = $ligne['id_utilisateur'];     //*
                     echo '42';
+                    break;
                 }
             }
             if ($_SESSION['connecte'] != true) {                // si on ne trouve pas un utilisateur on affiche le message suivant

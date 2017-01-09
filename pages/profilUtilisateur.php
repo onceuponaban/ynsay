@@ -5,14 +5,20 @@
         try 
         {
             $pseudo = $_SESSION['pseudo'];
-
             $dbh = new PDO('mysql:host=localhost;dbname=ynsay', 'root', '');
+<<<<<<< HEAD
             $resultat = $dbh->query("SELECT photo_profil FROM utilisateur WHERE pseudo = '$pseudo'");
             $check = $resultat->fetch(PDO::FETCH_NUM);
+=======
+            $stmt = $dbh->prepare("SELECT photo_profil FROM utilisateur WHERE pseudo = :pseudo");
+            $stmt->bindValue(':pseudo', $pseudo);
+            $stmt->execute();
+            $check = $stmt->fetch(PDO::FETCH_NUM);
+>>>>>>> refs/remotes/origin/master
             if ($check == true) 
             {
                 $urlPhoto = "../images/photo_profil.png"; //icône par défaut
-                foreach ($resultat as $ligne) 
+                foreach ($stmt as $ligne) 
                 {
                     $urlPhoto = $ligne['photo_profil'];
                     if(!file_exists($urlPhoto))
