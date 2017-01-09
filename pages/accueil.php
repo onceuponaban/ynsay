@@ -86,15 +86,17 @@ But de la page : page d'accueil, connexion / inscription
                         
             function readData(data,nb)
             {
-                if(nb === 1)
+                if(nb === 1 && data != 42)
                 {
                     document.getElementById("erreur").innerHTML = data;
                 }
-                if(nb === 2)
+                if(nb === 2 && data !== 'OK')
                 {
                     document.getElementById("erreur2").innerHTML = data;
                 }
-                if(data == 42 && nb === 1)        // il y a une couille ici !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                
+                
+                if(data == 42 && nb === 1)   // il y a une couille ici !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 {
                     document.location.href="http://localhost/ynsay/pages/lecture.php";
                 }
@@ -128,7 +130,7 @@ But de la page : page d'accueil, connexion / inscription
                     <span id="erreur"></span>
                     <p>Pseudonyme : <input id="pseudo" type="text" name="pseudo"></p>
                     <p>Mot de passe : <input id="mdp" type="password" name="mdp"></p>
-                    <span id="loader" style="display: none;"><img class="img_loader" src="../images/loader.gif" alt="Chargement" /></span></br>
+                    <span id="loader" style="display: none;"><img class="img_loader" src="../images/loader.gif" alt="Chargement" /></span>
                 </form>
                 <button class="btn waves-effect waves-light orange accent-4" onclick="request(readData);">Valider</button>
 
@@ -148,7 +150,7 @@ But de la page : page d'accueil, connexion / inscription
                     <p>E-mail : <input id="emailI" type="text" name="email"></p>
                     <p>Votre mot de passe : <input id="mdpI" type="password" name="mdp"></p>
                     <p>Confirmation de votre mot de passe : <input id="cmdpI" type="password" name="cmdp"></p>
-                    <span id="loader" style="display: none;"><img class="img_loader" src="../images/loader.gif" alt="Chargement" /></span></br>
+                    <span id="loader" style="display: none;"><img class="img_loader" src="../images/loader.gif" alt="Chargement" /></span>
                 </form>
                 <button class="btn waves-effect waves-light orange accent-4" onclick="request2(readData);">Valider</button>         
                 <button class="btn waves-effect waves-light orange accent-4" onclick="changeform(2);reiniterreur(2);">Me connecter</button>
